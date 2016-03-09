@@ -54,7 +54,7 @@
 	}
 	{\begin{center}
 	\LARGE\bf
-	M\textsc{emorandum}
+	L\textsc{ecture scribe}
 	\end{center}}
 	% To, From, Subject Block
 	\begin{description}
