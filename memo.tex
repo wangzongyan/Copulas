@@ -30,15 +30,93 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	MEMO CONTENT --> Your content is written here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-1.
+Q1.
 
 \begin{enumerate}
-\item Phasellus sodales orci lacus
-\item Vestibulum non tempus tortor
+\item As long as $F^q, q>0$, $F$ is infinitely divisible
+\item Domain of Attraction: Limit distribution of Minimum or Maximum of random variables exists
 \end{enumerate}
 
-2.
+Q2.1. How to relate infinitely divisible, domain of attraction, stable, slowly varying?
+1)In probability theory, a probability distribution is infinitely divisible if it can be expressed as the probability distribution of the sum of an arbitrary number of independent and identically distributed random variables. 
+2)
+multivariate distribution function,
+then it can be considered as infinitely divisible.
+domain of attraction: 
+stable:
+sum stable
+IF a sequesce of rv has indivisible proporty
+unit of frechet dist
+slowly varying: a function that 
+many of those joint probability, can be expressed as survival probability.
 
-3.
+2. 
+If our estimation procedure is consistent then both good enough.
+Some people dislike 2 stage, because automatically it isn't good.
+joint likelihood, we do 2 stage.
+coordinate decent is more popular recently.
+answer varies for "big".
+
+3. chap3 would talk about it
+
+4. AC property will be shown. broad family, it generates gumble C which is extreme ones.
+
+5. CO usually what we know is joint dist, 
+copula dependence b/c in general we don't have uni within the same family
+multivariate joint dist->marginal distribution
+we can transform any marginal we want. 
+we fit some dist to marginal and transform it to frechet. 
+application will be shown.
+
+6. 7. going to talk about it.
+
+text p28: 1-F=delta1Fac+delta2Fsin+delta3Fd those three delta are different
+
+8.VC will later be talked about
+estimate PC, hold off
+
+
+9. apply C, eg:
+$Y=(y_1,y_2,....,y_n)$    vector $\lambda(x_1,x_2,x_3,..,x_p)=f(a_1x_1+a_2x_2+...a_px_p)$
+multivariavte normal choose lambda as mu would be the same thing.
+
+10. compare C and Multivariate dist fn
+MD can also be considered as C, but it doesn't has uniform dist
+After we have transformed to the same distribution, 
+
+11. l(tx)/l(x) has a limit 1. eg. logx, 
+
+12. 3 distinct regions:
+In general linear regression, many situations we always have some good model fitting. 
+Ratio estimation procedure, good estimation at upp tail.
+No concrete answer.
+Extreme dependence no much attention to the middle part.
+Regression pay attention to the middle part, which dominates the model. 
+We don't use residual, we check misclassification rate. 
+If you generate data using the hyperplane,. either solution is acceptable for classification. 
+
+13. VC in 2.6 chp4 talk more
+
+14. high order moment
+C trandform MV to uniform, the high order moment exists.
+
+15. CC in a subset we choose C. Up to our purpose.
+
+16. truncation 
+orig: model fitting, truncation, 
+T,C applies to univariate marginals 
+tail dependence: $P(X>u|Y>u)$
+Bivariate normal,  $lim_{u->u^*}P(X^*>u|Y^*>u)=\lambda?0$
+$X^*=min{X,u^*},Y^*=min{Y,u^*}$   
+
+17. Effect of misspecification
+Truncation and censoring effect: Research question more like survival analysis part.
+Basically, truncation adn censoring are different. If we treat truncated data as normal distribution and transform it to uniform distribution, then we don't know what will happen yet. It also depends on the types of model we have. It's good research question. 
+18.frechet class:
+eg:copula fn 
+first one. 
+Upper bound:always is a joint distribution, lower bound: not always a joint distribution
+
+Q3.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
