@@ -54,16 +54,26 @@ Q3. How to use Laplace transformation to construct a copula can be further studi
 
 Archimedean Copula's property will be shown. Archimedean Copula is a very broad family. Many of copulas dependence structures could be constructed with the help of Archimedean Copula. it generates Gumbel Copulas which is extreme value copula.
 
-5. CO usually what we know is joint dist, 
-copula dependence b/c in general we don't have uni within the same family
-multivariate joint dist->marginal distribution
-we can transform any marginal we want. 
-we fit some dist to marginal and transform it to frechet. 
-application will be shown.
+5. Is there any formal definition of concordance ordering? since the concordance ordering is a way to compare multivariate distributions with the same set of uni-variate margins, but usually what we know is joint distribution rather than marginal distribution. So how do we apply this to practice problem?
 
-6. 7. going to talk about it.
+\begin{enumerate}
+\item The first part is discussed in Section 2.9
+\item Second part: Partly agree with what we know is joint distribution rather than marginal distribution. If we consider Multi-Normal, then it is the case. 
+\item The reason for we study Copulas dependence is that we don't have unified parametric form to model everything. Since in many cases, those marginal distributions are not within the same family. 
+\item For those marginal distribution, we always could do some transformations. Firstly, we fit some distribution to the marginal, then transform to uniform or $Fr\acute(e)chet$, then we use joint structure to model the joint distribution. This is the sample statement.
+\item Applications will be shown
+\end{enumerate}
 
-text p28: 1-F=delta1Fac+delta2Fsin+delta3Fd those three delta are different
+6. In the slides, there is one paragraph said that: 
+"The concordance ordering is a way to compare multivariate distributions with the same set of univariate margins so that we can decide if one multivariate distribution represents more dependence that another."
+I wonder how to use the concordance ordering?
+
+It will be taught soon. Be patient little little baby.
+
+text p28: "2.1.2 Absolutely continuous and singular components". It says: "The decomposition could also be written in terms of survival functions." Could you please explain more about this?
+
+Note $F = \delta_{ac}F_{ac} + \delta_{sin}F_{sin} + \delta_{d}F_d$ could be written in terms of survival function:
+$1 - F = \bar{\delta}_{ac}(1 - F_{ac}) + \bar{\delta}_{sin}(1 - F_{sin}) + \bar{\delta}_{d}(1 - F_d)$. Those three delta are different.
 
 8.VC will later be talked about
 estimate PC, hold off
