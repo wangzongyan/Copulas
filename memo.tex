@@ -40,7 +40,7 @@ In probability theory, a probability distribution is infinitely divisible if it 
 \item Domain of attraction: Limit distribution of Minimum or Maximum of random variables exists
 \item Sum stable: For any distribution, if a random variable can be expressed as a linear combination of independent variables. Those random variables follow the same distribution family.
 \item Max stable: take the maximum of a number of random variables. The random variable has a limit distribution with indivisible property. Any of these multivariate extreme value distribution can be expressed as a linear combination of unit $Fr\acute{e}chet$ random variables.
-\item slowly varying: many of those joint survival distribution can be expressed as $\bar{F}(x) \sim x^{-\alpha}\dot L(x)$
+\item slowly varying: many of those joint survival distribution can be expressed as $\bar{F}(x) \sim x^{-\alpha} L(x)$
 \end{enumerate}
 
 Q2. Tow-stage estimation for copula models, why a big difference between $\hat{\eta}$ and $\tilde{\eta}$, relative to the standard errors for V, suggests either the copula model or the uni-variate models may be inadequate. How 'big' is a relative big?
@@ -198,7 +198,7 @@ $X1 = e^{X_2/\alpha} - 1, X_2 \sim Expo(1)$
 \begin{align*}
 Cov(X_1, X_2)
 & = \int_0^{\infty} x(e^{x/\alpha} - 1) e^{-x} dx\\
-& = \int_0^{\infty} x e^{-\frac{\alpha - 1}{alpha}x} - x \dot e^{-x} dx\\
+& = \int_0^{\infty} x e^{-\frac{\alpha - 1}{alpha}x} - x e^{-x} dx\\
 & = (\frac{\alpha - 1}{\alpha})^2 - 1 \\
 & = \frac{2\alpha - 1}{(\alpha - 1)^2}
 \end{align*}
