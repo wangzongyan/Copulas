@@ -15,6 +15,8 @@
 \usepackage{iflang}
 \usepackage{ifthen}
 \usepackage{parskip}
+\usepackage{amsthm}
+\usepackage{amsmath}
 \setlength{\parindent}{15pt}
 \logo{\includegraphics[width=0.3\textwidth]{madison.jpg}} % Logo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,6 +32,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	MEMO CONTENT --> Your content is written here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Q \& A}
 Q1. How to relate infinitely divisible, domain of attraction, stable, slowly varying?
 \begin{enumerate}
 \item In case of multivariate distribution F, as long as $F^q, q>0$, F is infinitely divisible. if q is a positive integer, then it is always true. Otherwise, you have to check the power function.
@@ -123,18 +126,18 @@ Q14. If we estimate the three distinct regions of the composite empirical CDF, f
 If you generate data using the hyper-plane,. either solution is acceptable for classification. 
 \end{enumerate}
 
-15. Vine copulas were mentioned in Section 2.6. Given data, how can we estimate a pair-copula(if we focus on bivariate copulas) decomposition and represent it with regular vine structure?
+Q15. Vine copulas were mentioned in Section 2.6. Given data, how can we estimate a pair-copula(if we focus on bivariate copulas) decomposition and represent it with regular vine structure?
 
 We will discuss in Chapter 4.
 
-16. Does there exist a multivariate distribution on the positive quadrant that has tractable higher order moments? 
+Q16. Does there exist a multivariate distribution on the positive quadrant that has tractable higher order moments? 
 
 \begin{enumerate}
 \item All the multivariate- Normal, multivariate- T have high order moment
 \item Copulas transform marginal random variables to uniform, which means all the high order moment exist.
 \end{enumerate}
 
-17. What unconditional copulas should be chosen to approximate the conditional copulas?
+Q17. What unconditional copulas should be chosen to approximate the conditional copulas?
 
 \begin{enumerate}
 \item Conditional Copula is a copula we choose in constraint of a subset. The family of the copulas are unconditional copulas. 
@@ -145,7 +148,7 @@ Q18. I am interested in the effect of truncation/ censoring on dependence.
 For example, when one variables has upper-tail censoring, then potential upper-tail dependency may be hidden.
 
 \begin{enumerate}
-\item Truncation: Observe the value under the threshold
+\item Truncation: Observe the value under the threshold. See Figure 1
 \item If when the data observed, the data is not truncated or censored, we can just fit the model to original data.
 Then you can apply truncation, then study joint structure. 
 \item Truncation,Censoring applies to univariate marginals. (Research question) 
@@ -174,11 +177,36 @@ Q21. I found some papers about tail conditional variance. Would be interested to
 
 We could do research in this direction.
 
-22.frechet class:
-eg:copula fn 
-first one. 
-Upper bound:always is a joint distribution, lower bound: not always a joint distribution
+Q22. In the book 2.9, $Fr\acute{e}chet$ class was not clearly defined. What is the definition of $Fr\acute{e}chet$ class?
+
+\begin{enumerate}
+\item $Fr\acute{e}chet$ class: A $Fr\acute{e}chet$ class collects all multivariate joint distribution functions that have the same marginals.
+\item Upper bound: always is a joint distribution, lower bound: not always a joint distribution
+\end{enumerate}
+
+\section{Some Notes for the lecture}
+1. Linear coefficient may not be a good one. see Figure 2
+\begin{figure}
+\centering
+\includegraphics[width = 0.5\textwidth]{nonlinear.png}
+\caption{\label{fig: non-linear correlation}May suggests $y \sim x^2$, but correlation coefficient will be approximately 0}
+\end{figure}
+
+2. Example 2.7 Suppose $X_1 \sim Pareto(\alpha, 1)$, and $X_2 \sim Exponential(1)$, then $X_2 = F_2^{-1}(F_1(X_1)) = -\log[(1+X_1)^{-\alpha}] = \alpha \log(1+X_1)$ is a monotone increasing functional relation but the correlation of $X_1$, $X_2$ is not 1.
+\begin{proof}
+$X1 = e^{X_2/\alpha} - 1, X_2 \sim Expo(1)$
+\begin{align*}
+Cov(X_1, X_2)
+& = \int_0^{\infty} x(e^{x/\alpha} - 1) e^{-x} dx\\
+& = \int_0^{\infty} x e^{-\frac{\alpha - 1}{alpha}x} - x \dot e^{-x} dx\\
+& = (\frac{\alpha - 1}{\alpha})^2 - 1 \\
+& = \frac{2\alpha - 1}{(\alpha - 1)^2}
+\end{align*}
+Since $X_1 \sim Pareto(\alpha, 1)$, and $X_2 \sim Exponential(1)$, we have $var(X_1) = 1$, $var(X_2) = \frac{\alpha}{(\alpha - 1)^2 (\alpha - 2)}$,\\
+We have $Corr(X_1, X_2) = \frac{2\alpha - 1}{(\alpha - 1)\sqrt{\alpha/(\alpha - 2)}}$
+\end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
+
