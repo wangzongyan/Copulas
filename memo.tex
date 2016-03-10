@@ -50,11 +50,11 @@ Q2. Tow-stage estimation for copula models, why a big difference between $\hat{\
 
 Q3. How to use Laplace transformation to construct a copula can be further studied. Chap3 would talk about it.
 
-4. Using frailty parameter and resilience parameter, we can have Archimedean copulas. What is the importance of Archimedean copula?
+Q4. Using frailty parameter and resilience parameter, we can have Archimedean copulas. What is the importance of Archimedean copula?
 
 Archimedean Copula's property will be shown. Archimedean Copula is a very broad family. Many of copulas dependence structures could be constructed with the help of Archimedean Copula. it generates Gumbel Copulas which is extreme value copula.
 
-5. Is there any formal definition of concordance ordering? since the concordance ordering is a way to compare multivariate distributions with the same set of uni-variate margins, but usually what we know is joint distribution rather than marginal distribution. So how do we apply this to practice problem?
+Q5. Is there any formal definition of concordance ordering? since the concordance ordering is a way to compare multivariate distributions with the same set of uni-variate margins, but usually what we know is joint distribution rather than marginal distribution. So how do we apply this to practice problem?
 
 \begin{enumerate}
 \item The first part is discussed in Section 2.9
@@ -64,40 +64,65 @@ Archimedean Copula's property will be shown. Archimedean Copula is a very broad 
 \item Applications will be shown
 \end{enumerate}
 
-6. In the slides, there is one paragraph said that: 
+Q6. In the slides, there is one paragraph said that: 
 "The concordance ordering is a way to compare multivariate distributions with the same set of univariate margins so that we can decide if one multivariate distribution represents more dependence that another."
 I wonder how to use the concordance ordering?
 
 It will be taught soon. Be patient little little baby.
 
-text p28: "2.1.2 Absolutely continuous and singular components". It says: "The decomposition could also be written in terms of survival functions." Could you please explain more about this?
+Q7. Text p28: "2.1.2 Absolutely continuous and singular components". It says: "The decomposition could also be written in terms of survival functions." Could you please explain more about this?
 
 Note $F = \delta_{ac}F_{ac} + \delta_{sin}F_{sin} + \delta_{d}F_d$ could be written in terms of survival function:
 $1 - F = \bar{\delta}_{ac}(1 - F_{ac}) + \bar{\delta}_{sin}(1 - F_{sin}) + \bar{\delta}_{d}(1 - F_d)$. Those three delta are different.
 
-8.VC will later be talked about
-estimate PC, hold off
+Q8. Could you please talk more about Vine Copulas on Friday, 1) Why is partial correlation important for vine copula, 2) How can we do the pair-copula construction in general, 3) How could we estimate a pair-copula when we have the given data.
+
+Will be taught later
 
 
-9. apply C, eg:
-$Y=(y_1,y_2,....,y_n)$    vector $\lambda(x_1,x_2,x_3,..,x_p)=f(a_1x_1+a_2x_2+...a_px_p)$
-multivariavte normal choose lambda as mu would be the same thing.
+Q9. You mentioned when we have multiple responses and common covariates we can apply copula regression. Can you give an example of that?
 
-10. compare C and Multivariate dist fn
-MD can also be considered as C, but it doesn't has uniform dist
-After we have transformed to the same distribution, 
+\begin{enumerate}
+\item eg:
+$Y=(y_1,y_2,....,y_d)^T$ , $x_1, x_2, ..., x_p$ covariates. $y_1, ..., y_d$ are in the same distribution family.
+How could we do copulas regression? \
+Suppose we want to model $y_1$ to $y_d$ to a Gumbel Copula. Gumbel Copula only has one parameter $\lambda$. This $\lambda$ could be expressed as a function of X: \
+$\lambda(x_1,x_2,x_3,..,x_p)=f(a_1x_1+a_2x_2+...a_px_p)$
+\item Copula parameter is a function of covariates.
+\item Think about Multivariavte-Normal, in our multi-variate linear regression, choose $\lambda$ as $\mu$ would be the same thing.
+\end{enumerate}
 
-11. l(tx)/l(x) has a limit 1. eg. logx, 
+Q10. Can you talk more about concordance ordering? How can it cover the dependence information?
 
-12. 3 distinct regions:
-In general linear regression, many situations we always have some good model fitting. 
-Ratio estimation procedure, good estimation at upp tail.
+Will be taught soon.
+
+Q11. How to compare copula and multivariate models? When should we use copula?
+
+\begin{enumerate}
+\item In general, in multivariate distribution we have same marginals, basically, you could call it as Copulas too.
+\item We could use Copulas in any time. A specific reason for using Copulas is when we transform all the marginals to the same distribution, either uniform distributed or unique $Fr\acute{e}chet$. Some of people in UK transform the marginal to Gumbel distributed.  
+\end{enumerate}
+
+Q12. What is slowly varying function? What's its properties?
+
+$\frac{l(tx)}{l(x)}$ has a limit 1. eg. constant function, $\log(x)$ is slowly varying function. 
+
+Q13. Can you talk more about stochastic positive dependence?
+
+We will talk about it. 
+
+Q14. If we estimate the three distinct regions of the composite empirical CDF, for the interior, upper and lower tails, then we can graphically concatenate and display the result. But how can we assess the model fit?
+
+3 distinct regions:
+\begin{enumerate}
+\item In general linear regression, many situations we always have some good model fitting. 
+\item Ratio estimation procedure, good estimation at upper tail.
 No concrete answer.
-Extreme dependence no much attention to the middle part.
+\item Extreme dependence no much attention to the middle part.
 Regression pay attention to the middle part, which dominates the model. 
-We don't use residual, we check misclassification rate. 
-If you generate data using the hyperplane,. either solution is acceptable for classification. 
-
+\item We don't use residual, we check misclassification rate. 
+If you generate data using the hyper-plane,. either solution is acceptable for classification. 
+\end{enumerate}
 13. VC in 2.6 chp4 talk more
 
 14. high order moment
