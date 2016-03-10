@@ -30,36 +30,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	MEMO CONTENT --> Your content is written here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Q1.
-
+Q1. How to relate infinitely divisible, domain of attraction, stable, slowly varying?
 \begin{enumerate}
-\item As long as $F^q, q>0$, $F$ is infinitely divisible
-\item Domain of Attraction: Limit distribution of Minimum or Maximum of random variables exists
+\item In case of multivariate distribution F, as long as $F^q, q>0$, F is infinitely divisible. if q is a positive integer, then it is always true. Otherwise, you have to check the power function.
+In probability theory, a probability distribution is infinitely divisible if it can be expressed as the probability distribution of the sum of an arbitrary number of independent and identically distributed random variables. 
+\item Domain of attraction: Limit distribution of Minimum or Maximum of random variables exists
+\item Sum stable: For any distribution, if a random variable can be expressed as a linear combination of independent variables. Those random variables follow the same distribution family.
+\item Max stable: take the maximum of a number of random variables. The random variable has a limit distribution with indivisible property. Any of these multivariate extreme value distribution can be expressed as a linear combination of unit $Fr\acute{e}chet$ random variables.
+\item slowly varying: many of those joint survival distribution can be expressed as $\bar{F}(x) \sim x^{-\alpha}\dot L(x)$
 \end{enumerate}
 
-Q2.1. How to relate infinitely divisible, domain of attraction, stable, slowly varying?
-1)In probability theory, a probability distribution is infinitely divisible if it can be expressed as the probability distribution of the sum of an arbitrary number of independent and identically distributed random variables. 
-2)
-multivariate distribution function,
-then it can be considered as infinitely divisible.
-domain of attraction: 
-stable:
-sum stable
-IF a sequesce of rv has indivisible proporty
-unit of frechet dist
-slowly varying: a function that 
-many of those joint probability, can be expressed as survival probability.
+Q2. Tow-stage estimation for copula models, why a big difference between $\hat{\eta}$ and $\tilde{\eta}$, relative to the standard errors for V, suggests either the copula model or the uni-variate models may be inadequate. How 'big' is a relative big?
+\begin{enumerate}
+\item If our estimation procedure is consistent then both good enough. This is so called consistency check: $\hat{\eta}$ and $\tilde{\eta}$ should not differ a lot.
+\item Some people dislike 2 stage, because after you estimate the first part, there is a random variable. Then you have to adopt return part. Then the second part automatically isn't good.
+\item Coordinate decent is more popular recently, estimate the parameter one by one. 
+\item How big is a relative big? Ex. in linear regression model, how to consider two variances are the same? Rule of Thumb: $\hat{\eta}$/$\tilde{\eta}$ $\in [0.5, 2]$
+\end{enumerate}
 
-2. 
-If our estimation procedure is consistent then both good enough.
-Some people dislike 2 stage, because automatically it isn't good.
-joint likelihood, we do 2 stage.
-coordinate decent is more popular recently.
-answer varies for "big".
+Q3. How to use Laplace transformation to construct a copula can be further studied. Chap3 would talk about it.
 
-3. chap3 would talk about it
+4. Using frailty parameter and resilience parameter, we can have Archimedean copulas. What is the importance of Archimedean copula?
 
-4. AC property will be shown. broad family, it generates gumble C which is extreme ones.
+Archimedean Copula's property will be shown. Archimedean Copula is a very broad family. Many of copulas dependence structures could be constructed with the help of Archimedean Copula. it generates Gumbel Copulas which is extreme value copula.
 
 5. CO usually what we know is joint dist, 
 copula dependence b/c in general we don't have uni within the same family
