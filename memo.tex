@@ -116,35 +116,60 @@ Q14. If we estimate the three distinct regions of the composite empirical CDF, f
 3 distinct regions:
 \begin{enumerate}
 \item In general linear regression, many situations we always have some good model fitting. 
-\item Ratio estimation procedure, good estimation at upper tail.
-No concrete answer.
+\item Ratio estimation procedure, good estimation at upper tail, but not in the middle. No concrete answer.
 \item Extreme dependence no much attention to the middle part.
-Regression pay attention to the middle part, which dominates the model. 
+\item Regression pay attention to the middle part, the middle part dominates the fitting procedure. 
 \item We don't use residual, we check misclassification rate. 
 If you generate data using the hyper-plane,. either solution is acceptable for classification. 
 \end{enumerate}
-13. VC in 2.6 chp4 talk more
 
-14. high order moment
-C trandform MV to uniform, the high order moment exists.
+15. Vine copulas were mentioned in Section 2.6. Given data, how can we estimate a pair-copula(if we focus on bivariate copulas) decomposition and represent it with regular vine structure?
 
-15. CC in a subset we choose C. Up to our purpose.
+We will discuss in Chapter 4.
 
-16. truncation 
-orig: model fitting, truncation, 
-T,C applies to univariate marginals 
-tail dependence: $P(X>u|Y>u)$
-Bivariate normal,  $lim_{u->u^*}P(X^*>u|Y^*>u)=\lambda?0$
-$X^*=min{X,u^*},Y^*=min{Y,u^*}$   
+16. Does there exist a multivariate distribution on the positive quadrant that has tractable higher order moments? 
 
-17. Effect of misspecification
-Truncation and censoring effect: Research question more like survival analysis part.
-Basically, truncation adn censoring are different. If we treat truncated data as normal distribution and transform it to uniform distribution, then we don't know what will happen yet. It also depends on the types of model we have. It's good research question. 
-18.frechet class:
+\begin{enumerate}
+\item All the multivariate- Normal, multivariate- T have high order moment
+\item Copulas transform marginal random variables to uniform, which means all the high order moment exist.
+\end{enumerate}
+
+17. What unconditional copulas should be chosen to approximate the conditional copulas?
+
+\begin{enumerate}
+\item Conditional Copula is a copula we choose in constraint of a subset. The family of the copulas are unconditional copulas. 
+\item Up to our purpose.
+\end{enumerate}
+
+Q18. I am interested in the effect of truncation/ censoring on dependence.
+For example, when one variables has upper-tail censoring, then potential upper-tail dependency may be hidden.
+
+\begin{enumerate}
+\item Truncation: Observe the value under the threshold
+\item If when the data observed, the data is not truncated or censored, we can just fit the model to original data.
+Then you can apply truncation, then study joint structure. 
+\item Truncation,Censoring applies to univariate marginals. (Research question) 
+\item Tail dependence: $P(X>u|Y>u)$. Suppose we have bivariate-normal or bivariate-T,  $lim_{u->u^*}P(X^*>u|Y^*>u)=\lambda$. Would be a research question for whether $\lambda$ is equal to 0. Where $X^*=min{X,u^*},Y^*=min{Y,u^*}$   
+\end{enumerate}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{truncate.png}
+\caption{\label{fig: Example of Data Truncation} Data Truncation: Values Observed under the threshold}
+\end{figure}
+
+
+Q19. Effect of mis-specification of the marginal model, on the dependence parameter estimated from either an IFM or full-likelihood approach to estimating copula parameters?
+
+There is effect of mis-specification.
+
+
+Q20. Truncation and censoring effect: Research question more like survival analysis part.
+Basically, truncation and censoring are different. If we treat truncated data as normal distribution and transform it to uniform distribution, then we don't know what will happen yet. It also depends on the types of model we have. It's good research question. 
+20.frechet class:
 eg:copula fn 
 first one. 
 Upper bound:always is a joint distribution, lower bound: not always a joint distribution
 
-Q3.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
