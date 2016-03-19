@@ -17,6 +17,8 @@
 \usepackage{parskip}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
 \setlength{\parindent}{15pt}
 \logo{\includegraphics[width=0.3\textwidth]{madison.jpg}} % Logo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,12 +195,11 @@ Q22. In the book 2.9, $Fr\acute{e}chet$ class was not clearly defined. What is t
 
 \section{Some Notes for the lecture}
 1. Linear coefficient may not be a good one. see Figure 2
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width = 0.5\textwidth]{nonlinear.png}
 \caption{\label{fig: non-linear correlation}May suggests $y \sim x^2$, but correlation coefficient will be approximately 0}
 \end{figure}
-\\
 2. Example 2.7 Suppose $X_1 \sim Pareto(\alpha, 1)$, and $X_2 \sim Exponential(1)$, then $X_2 = F_2^{-1}(F_1(X_1)) = -\log[(1+X_1)^{-\alpha}] = \alpha \log(1+X_1)$ is a monotone increasing functional relation but the correlation of $X_1$, $X_2$ is not 1.
 \begin{proof}
 $X1 = e^{X_2/\alpha} - 1, X_2 \sim Expo(1)$
@@ -216,7 +217,12 @@ We have $Corr(X_1, X_2) = \frac{2\alpha - 1}{(\alpha - 1)\sqrt{\alpha/(\alpha - 
 3. Example 2.8 Suppose $X_1$, $X_2$ are countermonotonic. If $X_1$,$X_2\sim Exp(1)$, then $X_2=F_2^{-1}(1-F_1(X_1))=F_2^{-1}(e^{-X_1})=-log[1-e^{-X_1}]$ is a monontone decreasing functional relation but the correlation of $X_1$,$X_2$ is not -1.
 \begin{proof}
 \begin{align*}
-Corr(X_1, X_2)=[E(X_1X_2)-E(X_1)E(X_2)]/\sqrt{Var(X_1)Var(X_2)}=E(X_1X_2)-1=-E(X_1log[1-e^{-X_1})-1=-\int_0^{\infty} xlog[1-e^{-x} dx-1=0.355-1=-0.645
+Corr(X_1, X_2) 
+&=[E(X_1X_2)-E(X_1)E(X_2)]/\sqrt{Var(X_1)Var(X_2)} \\
+&=E(X_1X_2)-1= \\
+&-E(X_1log[1-e^{-X_1})-1 \\
+&=-\int_0^{\infty} xlog[1-e^{-x} dx-1\\
+&=0.355-1=-0.645
 \end{align*}
 
 \end{proof}
